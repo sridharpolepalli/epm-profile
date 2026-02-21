@@ -315,7 +315,7 @@ Do this with Keycloak running at http://localhost:8080 (admin: `admin` / `admin`
 1. In **epm-realm**, go to **Clients** → **Create client**.
 2. **General settings**
    - Client type: **OpenID Connect**
-   - Client ID: `epm-hrms-profile`
+   - Client ID: `campus-internal-team1`
 3. **Capability config**
    - Client authentication: **OFF** (public client)
    - Authorization: OFF
@@ -342,7 +342,7 @@ Do this with Keycloak running at http://localhost:8080 (admin: `admin` / `admin`
 
 ```mermaid
 flowchart LR
-  A[Create realm epm-realm] --> B[Create client epm-hrms-profile]
+  A[Create realm epm-realm] --> B[Create client campus-internal-team1]
   B --> C[Valid redirect URI: .../authorization]
   C --> D[Create user + password]
 ```
@@ -511,7 +511,7 @@ import Keycloak from 'keycloak-js';
 const keycloak = new Keycloak({
   url: 'http://localhost:8080',
   realm: 'epm-realm',
-  clientId: 'epm-hrms-profile'
+  clientId: 'campus-internal-team1'
 });
 
 export default keycloak;
@@ -932,7 +932,7 @@ flowchart LR
 
 **Cause:** The redirect URI used by the app is not listed in the client’s **Valid redirect URIs**.
 
-**Fix:** In Keycloak → **Clients** → **epm-hrms-profile** → **Valid redirect URIs**, add exactly:
+**Fix:** In Keycloak → **Clients** → **campus-internal-team1** → **Valid redirect URIs**, add exactly:
 
 - `https://localhost:7100/authorization`
 
@@ -1053,7 +1053,7 @@ Then run `git add .` again.
 
 ## Document info
 
-- **Naming:** Matches the current application (e.g. `epm-realm`, `epm-hrms-profile`, `epm-profile-ui`, `Epm.Profile.Api`, `ProfileController`, `AuthService`, `AuthInterceptor`, etc.).
+- **Naming:** Matches the current application (e.g. `epm-realm`, `campus-internal-team1`, `epm-profile-ui`, `Epm.Profile.Api`, `ProfileController`, `AuthService`, `AuthInterceptor`, etc.).
 - **References:** Docker installation details: [ChatGPT – Install Docker without Desktop](https://chatgpt.com/share/69998edb-55dc-800c-a616-97aee468144b).
 - **Ports:** Keycloak 8080, API HTTPS 7095, UI 7100 (HTTPS).
 
