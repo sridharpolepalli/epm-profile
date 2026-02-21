@@ -11,6 +11,7 @@ declare module 'keycloak-js' {
 
   interface KeycloakInstance {
     init(options?: { onLoad?: string; redirectUri?: string; pkceMethod?: string }): Promise<boolean>;
+    updateToken(minValidity?: number): Promise<boolean>;
     token?: string;
     authenticated?: boolean;
     logout(options?: object): void;

@@ -1,5 +1,28 @@
 <div class="dashboard">
   <h1>Dashboard</h1>
   <p>You are logged in. Access token is stored and available for API calls.</p>
+
+  <section class="profile-section" aria-label="Profile from API">
+    <h2>Profile (from .NET Web API)</h2>
+    <button type="button" class="btn-refresh" (click)="loadProfile()" [disabled]="loading" title="Refresh profile from Keycloak">
+      {{ loading ? 'Refreshing…' : 'Refresh profile' }}
+    </button>
+    <p class="loading" *ngIf="loading">Loading profile…</p>
+    <p class="error" *ngIf="!loading && profileError">{{ profileError }}</p>
+    <dl class="profile-dl" *ngIf="!loading && !profileError && profile">
+      <dt>Name</dt>
+      <dd>{{ profile.name || profile.preferred_username || '—' }}</dd>
+      <dt>Username</dt>
+      <dd>{{ profile.preferred_username || '—' }}</dd>
+      <dt>Email</dt>
+      <dd>{{ profile.email || '—' }}</dd>
+      <dt>Given name</dt>
+      <dd>{{ profile.given_name || '—' }}</dd>
+      <dt>Family name</dt>
+      <dd>{{ profile.family_name || '—' }}</dd>
+    </dl>
+    <p *ngIf="!loading && !profileError && !profile">No profile data.</p>
+  </section>
+
   <button type="button" (click)="auth.logout()">Logout</button>
 </div>
