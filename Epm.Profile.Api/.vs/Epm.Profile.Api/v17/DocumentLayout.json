@@ -9,6 +9,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{B5848BBC-3554-41AD-8FE0-80DB2440FC44}|Epm.Profile.Api\\Epm.Profile.Api.csproj|c:\\epam\\jan2026\\epm-profile\\epm.profile.api\\epm.profile.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5848BBC-3554-41AD-8FE0-80DB2440FC44}|Epm.Profile.Api\\Epm.Profile.Api.csproj|solutionrelative:epm.profile.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5848BBC-3554-41AD-8FE0-80DB2440FC44}|Epm.Profile.Api\\Epm.Profile.Api.csproj|c:\\epam\\jan2026\\epm-profile\\epm.profile.api\\epm.profile.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B5848BBC-3554-41AD-8FE0-80DB2440FC44}|Epm.Profile.Api\\Epm.Profile.Api.csproj|solutionrelative:epm.profile.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\epam\\jan2026\\epm-profile\\Epm.Profile.Api\\Epm.Profile.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Epm.Profile.Api\\appsettings.json",
+              "ToolTip": "C:\\epam\\jan2026\\epm-profile\\Epm.Profile.Api\\Epm.Profile.Api\\appsettings.json",
+              "RelativeToolTip": "Epm.Profile.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-21T11:13:08.326Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -32,7 +49,7 @@
               "RelativeDocumentMoniker": "Epm.Profile.Api\\Controllers\\ProfileController.cs",
               "ToolTip": "C:\\epam\\jan2026\\epm-profile\\Epm.Profile.Api\\Epm.Profile.Api\\Controllers\\ProfileController.cs",
               "RelativeToolTip": "Epm.Profile.Api\\Controllers\\ProfileController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-21T09:43:38.861Z",
               "EditorCaption": ""
@@ -45,9 +62,10 @@
               "RelativeDocumentMoniker": "Epm.Profile.Api\\Program.cs",
               "ToolTip": "C:\\epam\\jan2026\\epm-profile\\Epm.Profile.Api\\Epm.Profile.Api\\Program.cs",
               "RelativeToolTip": "Epm.Profile.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-21T09:42:39.15Z"
+              "WhenOpened": "2026-02-21T09:42:39.15Z",
+              "EditorCaption": ""
             }
           ]
         }

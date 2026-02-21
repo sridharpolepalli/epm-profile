@@ -7,7 +7,8 @@ namespace Epm.Profile.Api.Controllers
     [Route("api/profile")]
     public class ProfileController : ControllerBase
     {
-        private const string KeycloakUserInfoPath = "/protocol/openid-connect/userinfo";
+        // Relative to Keycloak realm BaseAddress (no leading slash so BaseAddress path is kept)
+        private const string KeycloakUserInfoPath = "protocol/openid-connect/userinfo";
         private readonly IHttpClientFactory _httpClientFactory;
 
         public ProfileController(IHttpClientFactory httpClientFactory)

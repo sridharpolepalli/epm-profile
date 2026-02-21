@@ -17,7 +17,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             NameClaimType = "preferred_username",
             ValidateAudience = false, // Keycloak access tokens often have variable/missing aud
             ValidateIssuer = true,
-            ValidIssuer = keycloakAuthority,
+            // Keycloak may use issuer with or without trailing slash
+            ValidIssuers = new[] { keycloakAuthority.TrimEnd('/'), keycloakAuthority.TrimEnd('/') + "/" },
         };
         options.Events = new JwtBearerEvents
         {
@@ -36,7 +37,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddHttpClient("Keycloak", client =>
 {
-    client.BaseAddress = new Uri(keycloakAuthority);
+    // Trailing slash required so relative path "protocol/..." resolves to .../realms/epm-realm/protocol/...
+    client.BaseAddress = new Uri(keycloakAuthority.TrimEnd('/') + "/");
 });
 
 builder.Services.AddAuthorization();
