@@ -5,7 +5,7 @@ import keycloak from './app/keycloak';
 
 keycloak.init({
   onLoad: 'login-required',
-  redirectUri: 'http://localhost:4200/authorization',
+  redirectUri: 'https://localhost:7100/authorization',
   pkceMethod: 'S256'
 }).then((authenticated: boolean) => {
   if (authenticated) {

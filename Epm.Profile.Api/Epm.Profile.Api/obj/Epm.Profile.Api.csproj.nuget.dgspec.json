@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\epam\\jan2026\\Epm.Profile.Api\\Epm.Profile.Api\\Epm.Profile.Api.csproj": {}
+    "C:\\epam\\jan2026\\epm-profile\\Epm.Profile.Api\\Epm.Profile.Api\\Epm.Profile.Api.csproj": {}
   },
   "projects": {
-    "C:\\epam\\jan2026\\Epm.Profile.Api\\Epm.Profile.Api\\Epm.Profile.Api.csproj": {
+    "C:\\epam\\jan2026\\epm-profile\\Epm.Profile.Api\\Epm.Profile.Api\\Epm.Profile.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\epam\\jan2026\\Epm.Profile.Api\\Epm.Profile.Api\\Epm.Profile.Api.csproj",
+        "projectUniqueName": "C:\\epam\\jan2026\\epm-profile\\Epm.Profile.Api\\Epm.Profile.Api\\Epm.Profile.Api.csproj",
         "projectName": "Epm.Profile.Api",
-        "projectPath": "C:\\epam\\jan2026\\Epm.Profile.Api\\Epm.Profile.Api\\Epm.Profile.Api.csproj",
+        "projectPath": "C:\\epam\\jan2026\\epm-profile\\Epm.Profile.Api\\Epm.Profile.Api\\Epm.Profile.Api.csproj",
         "packagesPath": "C:\\Users\\sridhar_polepalli\\.nuget\\packages\\",
-        "outputPath": "C:\\epam\\jan2026\\Epm.Profile.Api\\Epm.Profile.Api\\obj\\",
+        "outputPath": "C:\\epam\\jan2026\\epm-profile\\Epm.Profile.Api\\Epm.Profile.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Epm.Profile.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f684746db376eb8e2af9c8e9927dcf5a3db4de6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Epm.Profile.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Epm.Profile.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

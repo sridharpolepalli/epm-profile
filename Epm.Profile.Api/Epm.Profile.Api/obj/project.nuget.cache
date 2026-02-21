@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uS1GbWzYopo=",
+  "dgSpecHash": "I0JeDsdLAow=",
   "success": true,
-  "projectFilePath": "C:\\epam\\jan2026\\Epm.Profile.Api\\Epm.Profile.Api\\Epm.Profile.Api.csproj",
+  "projectFilePath": "C:\\epam\\jan2026\\epm-profile\\Epm.Profile.Api\\Epm.Profile.Api\\Epm.Profile.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sridhar_polepalli\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.13\\microsoft.aspnetcore.authentication.jwtbearer.9.0.13.nupkg.sha512",
     "C:\\Users\\sridhar_polepalli\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.0.1\\microsoft.identitymodel.abstractions.8.0.1.nupkg.sha512",
