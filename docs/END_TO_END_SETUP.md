@@ -138,40 +138,42 @@ The following diagram shows how the **Authorization Code flow with PKCE** works 
 
 ```mermaid
 sequenceDiagram
-  participant User
-  participant Browser as Angular App
-  participant Keycloak
-  participant API as .NET Web API
+  participant U as User
+  participant B as Angular App
+  participant K as Keycloak
+  participant A as .NET API
 
-  User->>Browser: 1. Open https://localhost:7100
-  Browser->>Browser: 2. keycloak.init(login-required)
-  Browser->>Keycloak: 3. Redirect to /auth?client_id=...&redirect_uri=.../authorization&code_challenge=...&response_type=code
-  Keycloak->>User: 4. Show login page
-  User->>Keycloak: 5. Enter username / password
-  Keycloak->>Browser: 6. Redirect to https://localhost:7100/authorization?code=xxx&state=yyy
-  Browser->>Browser: 7. main.ts runs again; keycloak.init() sees ?code=
-  Browser->>Keycloak: 8. Exchange code + code_verifier for tokens (POST /token)
-  Keycloak->>Browser: 9. Return access_token, refresh_token (and id_token)
-  Browser->>Browser: 10. Store access_token; bootstrap Angular
-  Browser->>Browser: 11. Route /authorization → redirect to /dashboard
-  User->>Browser: 12. Sees dashboard
-  Browser->>API: 13. GET /api/profile + Authorization: Bearer &lt;access_token&gt;
-  API->>API: 14. Validate JWT (signature, issuer)
-  API->>Keycloak: 15. GET /realms/epm-realm/protocol/openid-connect/userinfo + Bearer token
-  Keycloak->>API: 16. User profile (name, email, etc.)
-  API->>Browser: 17. Return profile JSON
-  Browser->>User: 18. Display profile on dashboard
+  U->>B: 1. Open app URL
+  B->>B: 2. keycloak.init login-required
+  B->>K: 3. Redirect to auth with code_challenge
+  K->>U: 4. Show login page
+  U->>K: 5. Enter credentials
+  K->>B: 6. Redirect with auth code
+  B->>B: 7. keycloak.init sees code
+  B->>K: 8. POST token exchange with code_verifier
+  K->>B: 9. Return access_token and refresh_token
+  B->>B: 10. Store token and bootstrap Angular
+  B->>B: 11. Redirect to dashboard
+  U->>B: 12. Sees dashboard
+  B->>A: 13. GET api/profile with Bearer token
+  A->>A: 14. Validate JWT
+  A->>K: 15. GET userinfo with Bearer token
+  K->>A: 16. User profile JSON
+  A->>B: 17. Return profile JSON
+  B->>U: 18. Display profile
 ```
+
+**Diagram note:** Short labels are used so the diagram renders in all Mermaid viewers (URLs and special characters can break parsing). The table below gives the full meaning.
 
 ### Flow summary
 
 | Step | What happens |
 |------|------------------|
-| 1–2  | User opens app; Keycloak JS requires login. |
-| 3–5  | Redirect to Keycloak; user logs in. |
-| 6–9  | Keycloak redirects back with `?code=...`; app exchanges code (with PKCE) for tokens. |
+| 1–2  | User opens app (https://localhost:7100); Keycloak JS requires login. |
+| 3–5  | Redirect to Keycloak auth with `client_id`, `redirect_uri`, `code_challenge`; user logs in. |
+| 6–9  | Keycloak redirects back to `/authorization?code=...`; app exchanges code + `code_verifier` for tokens (POST to token endpoint). |
 | 10–12| App stores access token, bootstraps Angular, redirects to `/dashboard`. |
-| 13–18| Dashboard calls API with Bearer token; API validates JWT and gets profile from Keycloak UserInfo; UI shows profile. |
+| 13–18| Dashboard calls `GET /api/profile` with `Authorization: Bearer &lt;token&gt;`; API validates JWT and fetches profile from Keycloak UserInfo; UI displays profile. |
 
 ---
 
